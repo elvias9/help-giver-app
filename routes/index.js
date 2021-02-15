@@ -11,13 +11,17 @@ const router = require("express").Router();
 // }
 
 /* GET home page */
-router.get("/", (req, res, next) => {
-  const user = req.session.user;
-  res.render("index", {user: user});
-});
+// router.get("/", (req, res, next) => {
+//   const user = req.session.user;
+//   res.render("index", {user: user});
+// });
 
 // router.get("/home", loginCheck(), (req, res) => {
 //   res.render("home");
 // });
+
+router.get("/", (req, res, next) => {
+  res.render("index");
+});
 
 module.exports = router;

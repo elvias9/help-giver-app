@@ -10,6 +10,12 @@ router.get("/login", (req, res, next) => {
   res.render("login");
 });
 
+
+//for me, just to have the home page rendered
+router.get('/home', (req, res) => {
+  res.render('home');
+})
+
 // router.post("/login", (req, res) => {
 //   const { username, password } = req.body;
 //   User.findOne({ username: username })
